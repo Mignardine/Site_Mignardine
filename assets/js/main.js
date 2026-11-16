@@ -74,6 +74,7 @@
   const form = document.getElementById('formulaire');
   const date = document.getElementById('f-date');
   if (date) date.min = new Date().toISOString().slice(0, 10);
+  if (form && !ct.email) form.hidden = true;
   if (form) {
     const retour = document.getElementById('f-retour');
     const bouton = document.getElementById('f-envoyer');

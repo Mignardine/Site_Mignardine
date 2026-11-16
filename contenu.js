@@ -17,17 +17,20 @@ window.CONTENU = {
   // Phrase affichée sous le nom, en haut du site
   accroche: "Pâtisseries faites maison, sur commande.",
 
-  // ---------- CONTACT ----------
+  // ---------- CONTACT : À COMPLÉTER ----------
+  // Écrivez entre les guillemets. Tant qu'une ligne reste vide (""),
+  // elle n'apparaît pas sur le site.
   contact: {
-    // Numéro affiché sur le site (écrivez-le comme vous voulez qu'il apparaisse)
-    telephone: "06 00 00 00 00",
+    // Numéro de téléphone, écrit comme il doit apparaître. Exemple : "06 12 34 56 78"
+    telephone: "",
 
-    // Adresse qui reçoit les commandes du formulaire.
-    // À la toute première commande, FormSubmit envoie un e-mail
+    // Adresse e-mail qui reçoit les commandes du formulaire. Exemple : "contact@mignardine.fr"
+    // Tant qu'elle est vide, le formulaire de commande est masqué.
+    // À la toute première commande, le service FormSubmit envoie un e-mail
     // "Confirm your email" à cette adresse : il faut cliquer dessus une fois.
-    email: "contact@exemple.fr",
+    email: "",
 
-    // Lien de la page Instagram (laisser "" pour masquer le bouton)
+    // Page Instagram
     instagram: "https://www.instagram.com/mignardine/",
     instagramNom: "@mignardine"
   },

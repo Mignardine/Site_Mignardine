@@ -203,3 +203,5 @@ h1, h2, h3 { font-family: var(--titre); font-weight: 400; line-height: 1.12; mar
 .produit-photo::before { display: none; }
 .contact-valeur, .prix-ligne dd { font-family: var(--texte); font-weight: 600; font-size: 1.1rem; }
 .section-titre { letter-spacing: -.01em; }
+
+.formulaire[hidden] { display: none; }
