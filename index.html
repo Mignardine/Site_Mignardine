@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mignardine, choux à la crème et gâteaux faits maison à Bayonne</title>
+  <meta name="description" content="Choux à la crème et gâteaux faits maison sur commande, à Bayonne, Anglet, Biarritz et dans le sud des Landes. Retrait sur place.">
+  <meta property="og:title" content="Mignardine">
+  <meta property="og:description" content="Choux à la crème et gâteaux faits maison, sur commande, autour de Bayonne.">
+  <meta property="og:image" content="assets/img/garniture.jpg">
+  <meta name="theme-color" content="#fbfaf7">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="saut" href="#carte">Aller à la carte</a>
+
+<header class="entete" id="entete">
+  <a class="entete-marque" href="#"><img src="assets/img/logo.jpg" alt="" width="36" height="36"><span data-texte="marque">Mignardine</span></a>
+  <nav class="entete-nav" aria-label="Navigation principale">
+    <a href="#carte">La carte</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#commander" class="entete-commander">Commander</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Ouverture : la vidéo du four viendra ici (elle avancera avec le défilement) -->
+  <section class="ouverture" id="ouverture">
+    <img class="ouverture-image" src="assets/img/garniture.jpg" alt="Choux à la crème décorés, sur une assiette blanche">
+    <div class="ouverture-texte">
+      <img class="ouverture-logo" src="assets/img/logo.jpg" alt="" width="88" height="88">
+      <h1 data-texte="marque">Mignardine</h1>
+      <p data-texte="accroche"></p>
+    </div>
+  </section>
+
+  <section class="carte" id="carte">
+    <h2 class="section-titre">La carte</h2>
+    <div class="carte-liste" id="carte-liste"></div>
+  </section>
+
+  <section class="commander" id="commander">
+    <div class="commander-infos">
+      <h2 class="section-titre">Commander</h2>
+      <p class="commander-intro">Tout est préparé sur commande. Écrivez-nous ou appelez, nous confirmons la date avec vous.</p>
+      <dl class="infos">
+        <div><dt>Où</dt><dd><span data-texte="zone.resume"></span><br><span class="infos-villes" id="villes"></span></dd></div>
+        <div><dt>Retrait</dt><dd data-texte="retrait"></dd></div>
+        <div><dt>Délai</dt><dd data-texte="delai"></dd></div>
+      </dl>
+      <div class="contacts" id="contacts"></div>
+    </div>
+
+    <form class="formulaire" id="formulaire" novalidate>
+      <h3>Votre demande</h3>
+      <div class="champ">
+        <label for="f-nom">Nom</label>
+        <input id="f-nom" name="nom" type="text" autocomplete="name" required>
+      </div>
+      <div class="champ">
+        <label for="f-tel">Téléphone</label>
+        <input id="f-tel" name="telephone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="champ">
+        <label for="f-mail">E-mail <span class="facultatif">(facultatif)</span></label>
+        <input id="f-mail" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="champ">
+        <label for="f-date">Date de retrait souhaitée</label>
+        <input id="f-date" name="date_retrait" type="date" required>
+      </div>
+      <div class="champ">
+        <label for="f-commande">Ce que vous souhaitez</label>
+        <textarea id="f-commande" name="commande" rows="4" required placeholder="Par exemple : 2 boîtes de 6 choux et un gâteau au miel"></textarea>
+      </div>
+      <input type="text" name="_honey" class="pot-de-miel" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="bouton" type="submit" id="f-envoyer">Envoyer ma demande</button>
+      <p class="formulaire-note">La commande est confirmée quand nous vous recontactons.</p>
+      <p class="formulaire-retour" id="f-retour" role="status"></p>
+    </form>
+  </section>
+  <section class="galerie" id="galerie">
+    <h2 class="section-titre">Galerie</h2>
+    <div class="galerie-grille" id="galerie-grille"></div>
+  </section>
+</main>
+
+<footer class="pied">
+  <img class="pied-logo" src="assets/img/logo.jpg" alt="" width="64" height="64">
+  <p class="pied-marque" data-texte="marque">Mignardine</p>
+  <p class="pied-zone" data-texte="zone.resume"></p>
+  <p class="pied-liens"><a id="pied-instagram" href="#">Instagram</a><a href="mentions-legales.html">Mentions légales</a></p>
+</footer>
+
+<script src="contenu.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
