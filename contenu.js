@@ -65,9 +65,8 @@ window.CONTENU = {
         { quantite: "Le gâteau, 5 parts", montant: "20 €" }
       ],
       allergenes: "Gluten (blé), œufs, lait",
-      // Mettre ici le nom de la photo quand elle sera prête, ex. "assets/img/bento.jpg"
-      photo: "",
-      photoTexte: "Gâteau bento"
+      photo: "assets/img/bento.jpg",
+      photoTexte: "Petit gâteau rond blanc décoré de fleurs roses, dans sa boîte"
     },
     {
       nom: "Gâteau au miel",

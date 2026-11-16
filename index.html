@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/four/d-000.webp" media="(min-width: 700px)">
+  <link rel="preload" as="image" href="assets/four/m-000.webp" media="(max-width: 699px)">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -29,13 +31,15 @@
 </header>
 
 <main>
-  <!-- Ouverture : la vidéo du four viendra ici (elle avancera avec le défilement) -->
-  <section class="ouverture" id="ouverture">
-    <img class="ouverture-image" src="assets/img/garniture.jpg" alt="Choux à la crème décorés, sur une assiette blanche">
-    <div class="ouverture-texte">
-      <img class="ouverture-logo" src="assets/img/logo.jpg" alt="" width="88" height="88">
-      <h1 data-texte="marque">Mignardine</h1>
-      <p data-texte="accroche"></p>
+  <!-- Ouverture : la vidéo du four avance avec le défilement -->
+  <section class="ouverture" id="ouverture" aria-label="Des choux cuisent dans un four">
+    <div class="ouverture-colle">
+      <div class="ouverture-titre">
+        <img src="assets/img/logo.jpg" alt="" width="72" height="72">
+        <h1 data-texte="marque">Mignardine</h1>
+        <p data-texte="accroche"></p>
+      </div>
+      <canvas id="four-canvas" width="1280" height="720" aria-hidden="true"></canvas>
     </div>
   </section>
 
@@ -99,5 +103,6 @@
 
 <script src="contenu.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/four.js"></script>
 </body>
 </html>

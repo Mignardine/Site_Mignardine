@@ -53,6 +53,8 @@ mentions-legales.html  la page des mentions légales
 contenu.js             TOUS les textes, prix et contacts
 assets/css/style.css   les couleurs, polices et mises en page
 assets/js/main.js      remplit la page et envoie le formulaire
+assets/js/four.js      la vidéo du four qui avance avec le défilement
+assets/four/           les images de la vidéo du four
 assets/img/            les photos du site
 ```
 

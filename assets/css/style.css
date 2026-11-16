@@ -72,13 +72,29 @@ h1, h2, h3 { font-family: var(--titre); font-weight: 400; line-height: 1.12; mar
 .entete-claire .entete-commander { background: var(--violette); border-color: var(--violette); color: #fff; }
 @media (max-width: 520px) { .entete-nav a:not(.entete-commander) { display: none; } }
 
-/* ---------- Ouverture ---------- */
-.ouverture { position: relative; height: 100vh; height: 100svh; min-height: 480px; overflow: hidden; background: var(--four); }
-.ouverture-image { width: 100%; height: 100%; object-fit: cover; }
-.ouverture::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,34,48,.25), rgba(20,34,48,.1) 40%, rgba(20,34,48,.65)); }
-.ouverture-texte { position: absolute; left: var(--marge); right: var(--marge); bottom: clamp(2rem, 8vh, 5rem); z-index: 1; color: #fff; }
-.ouverture-texte h1 { font-size: clamp(3.2rem, 11vw, 9rem); line-height: 1; }
-.ouverture-texte p { margin: .8rem 0 0; font-size: clamp(1.05rem, 2vw, 1.35rem); }
+/* ---------- Ouverture : la vidéo du four ----------
+   La section est haute (il faut défiler pour faire cuire) ;
+   l'image reste collée à l'écran pendant ce temps. */
+.ouverture { position: relative; height: 380vh; background: var(--four); }
+.ouverture-colle { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+#four-canvas { display: block; background: #1a1512; }
+
+/* Téléphone : le nom en haut, la vidéo en bande au milieu */
+.ouverture-colle { display: flex; flex-direction: column; justify-content: center; gap: 1.6rem; padding-top: 3rem; }
+.ouverture-titre { text-align: center; color: #fff; padding: 0 var(--marge); }
+.ouverture-titre img { border-radius: 50%; margin: 0 auto .9rem; border: 2px solid rgba(255,255,255,.85); }
+.ouverture-titre h1 { font-size: clamp(3rem, 14vw, 4.2rem); line-height: 1; }
+.ouverture-titre p { margin: .6rem 0 0; opacity: .85; }
+#four-canvas { width: 100%; height: auto; }
+
+/* Écran large (ordinateur, tablette couchée) : la vidéo en plein écran, rien d'autre */
+@media (min-width: 700px) and (min-aspect-ratio: 6/5) {
+  .ouverture-colle { display: block; padding: 0; }
+  .ouverture-titre { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  #four-canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ouverture-colle::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 110px; z-index: 1; background: linear-gradient(rgba(20,34,48,.6), rgba(20,34,48,0)); }
+  .entete:not(.entete-claire) .entete-marque { opacity: 1; }
+}
 
 /* ---------- Titres de section ---------- */
 .section-titre { font-size: clamp(2.2rem, 5.5vw, 4rem); }
